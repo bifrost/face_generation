@@ -1,0 +1,77 @@
+Meets Specifications
+This is a very good project! :clap:
+you could have done a little bit better by adding dropout and running twice the generator, but the final result is already very good!
+If you are very motivated and want even more to improve the current result you can follow the suggestions and read and apply the techniques described in the following links:
+
+How to Train a GAN? Tips and tricks to make GANs work: https://github.com/soumith/ganhacks.
+Improved Techniques for Training GANs: https://arxiv.org/pdf/1606.03498.pdf
+Congratulations on almost finishing Deep Learning Nanodegree Foundations program! Just one additional project!
+
+Required Files and Tests
+The project submission contains the project notebook, called “dlnd_face_generation.ipynb”.
+
+Well Done! :+1:.
+Both files included.
+
+All the unit tests in project have passed.
+
+Well Done! :+1:.
+Unit testing is a very powerful method to catch bugs.
+But keep in mind that it can't catch everything.
+
+Build the Neural Network
+The function model_inputs is implemented correctly.
+
+The placeholders for real input, z input, and the learning rate are correctly defined.
+It's also a good idea to have added names. This makes the code clearer.
+Good Job! :+1:.
+
+The function discriminator is implemented correctly.
+
+Well done using Batch Normalization and Leaky ReLUs. It's crucial for the network's ability to learn. :clap:
+
+Suggestion:
+
+Your alpha parameter could be higher. Try something close to 0.1
+You could have implemented dropout after the dense layer to make the discriminator more robust!
+The function generator is implemented correctly.
+
+Well done using batch normalization and Leaky ReLUs to avoid sparse gradients.
+it's a very good idea to have chosen an architecture of greater depth for this generator compare to the discriminator. Its job is "harder" to do.
+:clap:
+
+Suggestion:
+
+Your alpha parameter could be higher. Try something close to 0.1
+The function model_loss is implemented correctly.
+
+Well done using Label smoothing. It will help the generator to be better at the start and the stabilize the learning steps of both generator/discriminator.
+
+The function model_opt is implemented correctly.
+
+Well done using tf.GraphKeys.UPDATE_OPS to update the training step
+
+Neural Network Training
+The function train is implemented correctly.
+
+It should build the model using model_inputs, model_loss, and model_opt.
+It should show output of the generator using the show_generator_output function
+Well Done doing batch_images *= 2.0 to take into account the tanh output of the generator. :clap:
+
+Suggestion:
+Run the generator twice. This is to make sure that the discriminator loss function does not just converge to zero very quickly.
+
+The parameters are set reasonable numbers.
+
+GANs are very sensitive to hyperparameters. Your hyperparameters choice is good . Well done!  :clap:
+
+The project generates realistic faces. It should be obvious that images generated look like faces.
+
+The overall result is good. Well done!
+You could improve a bit your final result by trying by order of priority :
+
+Increase your alpha parameter (close to 0.1-0.2)
+increase the label smoothing parameter (close to 0.1)
+Add a dropout after the dense layer on the Discriminator.
+Run the generator twice.
+Don't forget to tune a bit your hyperparameters after each modification!
